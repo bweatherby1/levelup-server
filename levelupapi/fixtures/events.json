@@ -1,0 +1,25 @@
+[
+  {
+    "model": "levelupapi.event",
+    "pk": 1,
+    "fields": {
+      "game": 1,
+      "description": "Lets cut grass",
+      "date": "2024-10-03",
+      "time": "12:00:00",
+      "organizer": 1
+    }
+  },
+
+  {
+    "model": "levelupapi.event",
+    "pk": 2,
+    "fields": {
+      "game": 2,
+      "description": "Lets cut bad guys",
+      "date": "2024-11-05",
+      "time": "10:00:00",
+      "organizer": 1
+    }
+  }
+]
