@@ -17,6 +17,23 @@ class EventView(ViewSet):
         events = Event.objects.all()
         serializer = EventSerializer(events, many=True)
         return Response(serializer.data)
+    
+    def create(self, request):
+        """Handle POST operations
+
+        Returns
+            Response -- JSON serialized game instance
+        """
+
+        event = Event.objects.create(
+            game=request.data["game"],
+            description=request.data["description"],
+            date=request.data["date"],
+            time=request.data["time"],
+            organizer=request.data["organizer"],
+        )
+        serializer = EventSerializer(event)
+        return Response(serializer.data)
 
 class EventSerializer(serializers.ModelSerializer):
     class Meta:
